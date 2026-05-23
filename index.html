@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Lin — Software Engineer · Astronomy, Music, Finance</title>
+<meta name="description" content="Software engineer building domain-rigorous apps where the underlying physics, music theory, or market data is real, not faked.">
+<meta property="og:title" content="Kevin Lin — domain-rigorous apps">
+<meta property="og:description" content="Astronomy, music, and finance — tools where the domain accuracy is real, not faked.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c12; --panel:#15151f; --panel-2:#1c1c28; --border:#262635;
+    --text:#eaeaf0; --dim:#9ea0b3; --faint:#6a6c80;
+    --accent:#5db1ff; --accent-warm:#ffb86b; --serif:'Lora',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:Inter,-apple-system,"PingFang TC",sans-serif;
+    line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(ellipse at top, #1a1a2c 0%, var(--bg) 60%);
+    min-height:100vh;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+  /* ── Hero ────────────────────────────────────────── */
+  header.hero{padding:96px 0 64px;text-align:left}
+  .name{font-family:var(--serif);font-weight:600;font-size:48px;
+        letter-spacing:-0.02em;line-height:1.05;margin-bottom:18px}
+  .tag{font-size:20px;color:var(--text);max-width:640px;
+       line-height:1.55;margin-bottom:14px}
+  .tag em{font-style:normal;color:var(--accent-warm);font-weight:500}
+  .meta{color:var(--dim);font-size:14.5px;letter-spacing:.01em}
+
+  /* ── Section title ────────────────────────────────── */
+  h2{font-size:13px;font-weight:600;color:var(--faint);
+     text-transform:uppercase;letter-spacing:0.14em;
+     margin:64px 0 24px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+
+  /* ── Project cards ────────────────────────────────── */
+  .project{display:grid;grid-template-columns:340px 1fr;gap:28px;
+           padding:24px;background:var(--panel);border:1px solid var(--border);
+           border-radius:12px;margin-bottom:20px;transition:border-color .15s}
+  .project:hover{border-color:#34344a}
+  .shot{width:100%;aspect-ratio:16/10;object-fit:cover;
+        border-radius:8px;background:var(--panel-2);
+        border:1px solid var(--border);display:block}
+  .pcontent h3{font-family:var(--serif);font-weight:600;
+               font-size:23px;letter-spacing:-0.01em;margin-bottom:4px}
+  .pcontent .ptag{color:var(--dim);font-size:13.5px;margin-bottom:12px;
+                  font-style:italic}
+  .pcontent p{font-size:14.5px;color:var(--text);margin-bottom:14px;line-height:1.6}
+  .links{display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px;
+         font-weight:500;margin-bottom:10px}
+  .stack{font-size:12px;color:var(--faint);letter-spacing:.02em}
+  .stack span{margin-right:10px}
+
+  /* ── About ────────────────────────────────────────── */
+  .about{font-size:16px;color:var(--text);line-height:1.75;max-width:680px}
+  .about p{margin-bottom:14px}
+  .about em{font-style:normal;color:var(--accent-warm)}
+
+  /* ── Contact ──────────────────────────────────────── */
+  .contact{font-size:15px;color:var(--text)}
+  .contact .row{margin-bottom:6px}
+  .contact .label{color:var(--faint);display:inline-block;min-width:90px;font-size:13px}
+
+  /* ── Footer ───────────────────────────────────────── */
+  footer{margin:72px 0 48px;padding-top:24px;border-top:1px solid var(--border);
+         display:flex;justify-content:space-between;align-items:center;
+         color:var(--faint);font-size:13px;flex-wrap:wrap;gap:8px}
+  footer a{color:var(--dim)}
+
+  /* ── Responsive ───────────────────────────────────── */
+  @media (max-width:640px){
+    header.hero{padding:64px 0 40px}
+    .name{font-size:36px}
+    .tag{font-size:17px}
+    .project{grid-template-columns:1fr;gap:18px;padding:18px}
+    .shot{aspect-ratio:16/10}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1 class="name">Kevin Lin</h1>
+  <p class="tag">Software engineer building <em>domain-rigorous apps</em> — astronomy, music, finance — where the underlying physics, music theory, or market microstructure is real, not faked.</p>
+  <p class="meta">Based in Taiwan · Amateur violinist · <a href="https://github.com/kevinlin49361128-stack">github.com/kevinlin49361128-stack</a></p>
+</header>
+
+<h2>Featured projects</h2>
+
+<!-- Solar System 3D -->
+<article class="project">
+  <img class="shot" src="screenshots/solar-system-3d.jpg" alt="Solar System 3D heliocentric overview">
+  <div class="pcontent">
+    <h3>Solar System 3D</h3>
+    <div class="ptag">Browser-based 3D astronomy simulator · v0.8.0</div>
+    <p>Real NASA J2000 orbital mechanics — a Newton-Raphson Kepler solver, plus an optional Yoshida-4 symplectic N-body integrator. Three viewing tiers (solar system → 50 ly neighbourhood → galactic disc) with seamless transitions. Observer mode renders the sky with Hosek-Wilkie atmospheric scattering, applies stellar proper motion + annual aberration, and computes magnetic declination so the AR gyro compass shows true north. Telescope bridge for INDI / ASCOM mounts.</p>
+    <div class="links">
+      <a href="https://solar-system-3d-kappa.vercel.app/">Live demo →</a>
+      <a href="https://github.com/kevinlin49361128-stack/solar-system-3d">Source</a>
+      <a href="https://github.com/kevinlin49361128-stack/solar-system-3d/releases/tag/v0.8.0">v0.8.0 notes</a>
+    </div>
+    <div class="stack">
+      <span>Three.js</span><span>TypeScript</span><span>Vite</span><span>WebGL2</span><span>327 tests · MIT</span>
+    </div>
+  </div>
+</article>
+
+<!-- Score Arranger -->
+<article class="project">
+  <img class="shot" src="screenshots/score-arranger.png" alt="Score Arranger UI with difficulty dialog and playability check">
+  <div class="pcontent">
+    <h3>Score Arranger</h3>
+    <div class="ptag">Intelligent orchestral-score arranger for macOS</div>
+    <p>Desktop app that arranges full orchestral scores into smaller ensembles — string quartet, violin + piano, solo piano, etc. Constraint-based voice allocation with a directed-repair loop, plus playability checks (range, double-stops, bow patterns) that catch what an actual musician would. Human-AI collaboration, not full automation. Apple-notarized <code>.dmg</code>.</p>
+    <div class="links">
+      <a href="https://kevinlin49361128-stack.github.io/score-arranger-web/">Project page →</a>
+      <a href="https://github.com/kevinlin49361128-stack/score-arranger">Source</a>
+    </div>
+    <div class="stack">
+      <span>Electron</span><span>React</span><span>TypeScript</span><span>Python (music21)</span><span>OSMD</span><span>GPLv3</span>
+    </div>
+  </div>
+</article>
+
+<!-- Stock Analyzer -->
+<article class="project">
+  <img class="shot" src="screenshots/stock-analyzer.png" alt="Stock Analyzer K-line chart with institutional flow sub-pane">
+  <div class="pcontent">
+    <h3>Stock Analyzer <span style="color:var(--faint);font-weight:500;font-size:0.85em">+ MCP</span></h3>
+    <div class="ptag">Taiwan + US market research, MCP-native</div>
+    <p>macOS app and MCP server with 81 tools covering Taiwan (TWSE / TPEx) and US markets — institutional flow, chip data, technical indicators, backtests, DCF, sentiment. Local SQLite, BYOK LLM. First MCP server with full Taiwan-market coverage.</p>
+    <div class="links">
+      <a href="https://stockanalyzer-showcase.pages.dev/">Showcase →</a>
+      <a href="https://github.com/kevinlin49361128-stack/stock-analyzer-mcp">Source (MCP)</a>
+    </div>
+    <div class="stack">
+      <span>Electron</span><span>TypeScript</span><span>Python</span><span>SQLite</span><span>MCP</span>
+    </div>
+  </div>
+</article>
+
+<h2>The through-line</h2>
+<div class="about">
+  <p>Astronomy, music, and finance look unrelated, but they share a constraint: <em>the domain rigor has to be real</em>. A demo that fakes the orbits, the playability rules, or the market microstructure breaks at first use. I prefer to do the work that makes the domain part actually correct, then ship the polish around it — notarized installers, live demos, test suites, proper release tags.</p>
+  <p>The music projects come from being an amateur violinist. <a href="https://github.com/kevinlin49361128-stack/score-arranger">Score Arranger</a> and <a href="https://github.com/kevinlin49361128-stack/concerto-manager-lite">Concerto Manager Lite</a> are tools I wished existed for the rehearsals and chamber groups I play in.</p>
+</div>
+
+<h2>Contact</h2>
+<div class="contact">
+  <div class="row"><span class="label">GitHub</span><a href="https://github.com/kevinlin49361128-stack">@kevinlin49361128-stack</a></div>
+  <div class="row"><span class="label">Issues</span>open one on any project above — fastest way to reach me</div>
+  <div class="row"><span class="label">Email</span>on my GitHub profile</div>
+</div>
+
+<footer>
+  <span>© Kevin Lin · Built static, no framework — <a href="https://github.com/kevinlin49361128-stack?tab=repositories">More on GitHub →</a></span>
+  <span>Made in Taiwan 🇹🇼</span>
+</footer>
+
+</div>
+</body>
+</html>
